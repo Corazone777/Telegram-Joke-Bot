@@ -2,7 +2,7 @@
 
 const JOKE_URL = "https://v2.jokeapi.dev/joke/Any";
 const TELEGRAM_URL = "https://api.telegram.org/bot";
-const TELEGRAM_KEY = "5199295914:AAFEJKNGlrBqKMiWfZdBBJrAkP2BZtM2mX0";
+const TELEGRAM_KEY = "";
 const METHOD_NAME = ['/getMe', '/getUpdates', '/sendMessage'];
 
 
@@ -31,7 +31,7 @@ $joke_message = implode(tell_jokes($joke));
 ////////Telegram Bot\\\\\\\\\
 $telegram_updates = TELEGRAM_URL . TELEGRAM_KEY . METHOD_NAME[1];
 $update = json_decode(file_get_contents($telegram_updates));
-$chat_id = -642364932;
+$chat_id = ;
 
 $telegram_send_message = TELEGRAM_URL . TELEGRAM_KEY . METHOD_NAME[2] . "?chat_id={$chat_id}" . "&text=$joke_message";
 $joke = json_decode(file_get_contents($telegram_send_message));
